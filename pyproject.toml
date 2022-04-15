@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "functon"
+version = "0.0.1b"
+description = "True Functional Programming for Python"
+authors = ["zhivykh <zivih.n@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.942"
+pytest = "^7.1.1"
+black = "^22.3.0"
+isort = "^5.10.1"
+pylint = "^2.13.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = ["C0103", "C0111", "R0903"]
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+no_implicit_optional = true
+
+[tool.pytest]
+addopts = "--cov=app --cov-fail-under=60"
+python_files = "test_*.py"
+python_classes = ["*Test", "Test*"]
+python_functions = "test__*"
