@@ -15,31 +15,26 @@ Hello world:
 ```python
 >> from functon import fn
 >> fn(print, "Hello world!")
-Hello world!
+'Hello world!'
 ```
 
 
 Triple the value of a number:
 
 ```python
->> from functon import defun, fn
->> triple = defun(("X"),
-    "Compute three times X.",
-    ("*", 3, "X"))
->> res = fn(triple, 3)
->> res
+>>> from functon import defun, fn
+>>> def triple(x: int) -> defun(("*", 3, "x")):
+...     """Compute three times X."""
+>>> fn(triple, 3)
 9
 ```
 
 Compute factorials using recursion:
 
 ```python
->> from functon import defun, fn
->> factorial = defun(("N"),
-    "Compute the factorial of N.",
-    ("if", ("=", "N", 1),
-        1,
-    ("*", "N", ("factorial", ("-", "N", 1)))))
->> fn(factorial, 5) 
+>>> from functon import defun, fn, IF
+>>> def factorial(N: int) -> defun((IF, ("=", "N", 1), 1, ("*", "N", ("factorial", ("-", "N", 1))))):
+...     """Compute the factorial of N."""
+>>> fn(factorial, 5) 
 120
 ```
