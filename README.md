@@ -16,8 +16,8 @@ python3 -m pip install functon
 Hello world:
 
 ```python
->> from functon import fn
->> fn(print, "Hello world!")
+>>> from functon import fn
+>>> fn(print, "Hello world!")
 'Hello world!'
 ```
 
