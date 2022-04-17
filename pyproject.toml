@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "functon"
-version = "0.0.1b"
-description = "True Functional Programming for Python"
+version = "0.0.2dev"
+description = "True functional programming in Python"
 authors = ["zhivykh <zivih.n@gmail.com>"]
 repository = "https://github.com/zhivykh/functon"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
